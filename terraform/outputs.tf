@@ -1,4 +1,4 @@
-output "nextcloud_IP_adress" {
+output "loadbalancer_ip_adress" {
   value = "${digitalocean_loadbalancer.nextcloud.ip}"
 }
 
