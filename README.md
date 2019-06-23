@@ -24,7 +24,7 @@ _After successfully creating the required resources, an output of the load balan
 
 _Be sure to select PostgresSQL on the setup_
 
-
+![nextcloudsetup](https://drive.google.com/uc?export=view&id=1T3_swmlIIpTwwIKh5eqKfhbcxPhEQ-1a)
 
 **5.** Enjoy your new micro-service deployment of Nextcloud!
 
@@ -40,8 +40,6 @@ Since the app itself is a simple and immutable docker image, simply destroy the 
 
 ## What's happening under the hood
 
-Oceancloud is going to create a series of resources as shown in the below diagram.
-
-
+![cloudcraftdiagram](https://drive.google.com/uc?export=view&id=1k5_2TqiD_zzBDyoPIOGEtiVB2h0-iVFB)
 
 The main advantage of this architecture is that both the database and persistent data are both abstracted from the docker host. The database is provisioned and managed by Digital Ocean, and the persistent data is abstracted and mapped to a separate block storage device via [dostorage](https://github.com/omallo/docker-volume-plugin-dostorage). The Docker droplet now simply pulls and runs the latest stable Nextcloud image, making it completely immutable.
